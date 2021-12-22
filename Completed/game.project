@@ -8,6 +8,8 @@ shared_state = 1
 width = 540
 height = 960
 high_dpi = 1
+display_profiles = /main/default.display_profilesc
+dynamic_orientation = 1
 
 [android]
 input_method = HiddenInputField
