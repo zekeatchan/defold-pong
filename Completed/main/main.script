@@ -41,13 +41,13 @@ end
 function on_message(self, message_id, message,sender)
 	if message_id == SHOW_GAME then
 		gotoScene("scenes#game")
-		playMusic("music#inGame")
+		-- playMusic("music#inGame")
 	elseif message_id == SHOW_MENU then
 		gotoScene("scenes#menu")
 	elseif message_id == PROXY_LOADED then
 		msg.post(sender, "enable")
 	elseif message_id == GAME_OVER then
 		gotoScene("scenes#gameOver")
-		playMusic("music#interlude")
+		-- playMusic("music#interlude")
 	end
 end	
