@@ -1,4 +1,4 @@
-script: ""
+script: "/scenes/1-menu/menu.gui_script"
 fonts {
   name: "menu"
   font: "/assets/fonts/menu.font"
