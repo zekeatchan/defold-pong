@@ -1,18 +1,3 @@
-local function check_touch_node(node, action)
-	if gui.pick_node(node, action.x, action.y) and action.pressed then
-		gui.play_flipbook(node, 'yellow_button')
-	else
-		gui.play_flipbook(node, 'blue_button')
-	end
-end
-
-local function check_touch_input(self, action_id, action)
-	print("INPUT");
-	check_touch_node(self.btn_1player, action);
-	check_touch_node(self.btn_2players, action);
-	check_touch_node(self.btn_how_to_play, action);
-end
-
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.btn_1player = gui.get_node('btn_1player');
@@ -39,7 +24,16 @@ function on_message(self, message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
-	check_touch_input(self, action_id, action);
+	-- check_touch_input(self, action_id, action);
+	if action.pressed then
+		if gui.pick_node(self.btn_1player, action.x, action.y) then
+			print("1 Player")
+		elseif gui.pick_node(self.btn_2players, action.x, action.y) then
+			print("2 Players")
+		elseif gui.pick_node(self.btn_how_to_play, action.x, action.y) then
+			print("HTP")
+		end
+	end
 end
 
 function on_reload(self)
