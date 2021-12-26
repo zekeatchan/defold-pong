@@ -15,6 +15,8 @@ M.distance = 0
 M.sections = {0, 0, 0}
 M.state = M.STATE_WAIT
 M.time_elapsed = 0
+M.has_touch_screen = false
+M.players = 1
 
 function M.updateScore(score, player)
 	M.score = M.score + math.floor(score)
@@ -67,5 +69,22 @@ end
 function M.set_state(state)
 	M.state = state
 end
+
+function M.set_touch_enabled(enabled)
+	M.has_touch_screen = enabled
+end
+
+function M.get_touch_enabled()
+	return M.has_touch_screen
+end
+
+function M.set_players(number)
+	M.players = number
+end
+
+function M.get_players()
+	return M.players
+end
+
 
 return M

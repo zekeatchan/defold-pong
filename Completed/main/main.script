@@ -36,6 +36,10 @@ function init(self)
 	msg.post(".", "acquire_input_focus")
 	msg.post(current_scene, "load")
 	-- sound.play(current_music)
+
+	if html5 then
+		data.set_touch_enabled(html5.run("hasTouchScreen();") == "true")
+	end
 end
 
 function on_message(self, message_id, message,sender)
