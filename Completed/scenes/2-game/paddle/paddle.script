@@ -1,7 +1,9 @@
+go.property("player", 1)
+
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	if self.player == 2 then
+		sprite.play_flipbook("#sprite", hash("paddle_red"))
+	end	
 end
 
 function final(self)
