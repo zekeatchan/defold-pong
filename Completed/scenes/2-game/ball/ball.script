@@ -1,4 +1,7 @@
 function init(self)
+	self.start_position = go.get_position()
+	self.direction = vmath.quat_rotation_z(math.rad(math.random(0, 360)))
+	print(self.direction)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
