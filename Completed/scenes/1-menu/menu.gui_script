@@ -1,3 +1,17 @@
+local data = require "main.data"
+local messages = require "main.messages"
+
+local SHOW_GAME = messages.SHOW_GAME
+local SHOW_MENU = messages.SHOW_MENU
+local GAME_OVER = messages.GAME_OVER
+local UNLOAD_GAME_OVER = messages.UNLOAD_GAME_OVER
+local PROXY_LOADED = messages.PROXY_LOADED
+
+local function start_game(players)
+	data.set_players(players)
+	msg.post("main:/scenes", SHOW_GAME)
+end
+
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.btn_1player = gui.get_node('btn_1player');
@@ -27,17 +41,11 @@ function on_input(self, action_id, action)
 	-- check_touch_input(self, action_id, action);
 	if action.pressed then
 		if gui.pick_node(self.btn_1player, action.x, action.y) then
-			print("1 Player")
+			start_game(1)
 		elseif gui.pick_node(self.btn_2players, action.x, action.y) then
-			print("2 Players")
+			start_game(2)
 		elseif gui.pick_node(self.btn_how_to_play, action.x, action.y) then
 			print("HTP")
 		end
 	end
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
 end
