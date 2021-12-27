@@ -1,7 +1,12 @@
+go.property("speed", 500)
+
 function init(self)
-	self.start_position = go.get_position()
-	self.direction = vmath.quat_rotation_z(math.rad(math.random(0, 360)))
-	print(self.direction)
+	math.randomseed(os.time())
+	
+	local rotation = go.get_rotation()
+	local randomAngle = math.rad(math.random()*360)
+	self.direction = rotation * vmath.quat_rotation_z(randomAngle)
+
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
@@ -14,9 +19,9 @@ function final(self)
 end
 
 function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	local pos = go.get_position()
+	pos = pos + self.direction * self.speed * dt
+	go.set_position(pos)
 end
 
 function on_message(self, message_id, message, sender)
