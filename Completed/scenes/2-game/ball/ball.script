@@ -1,15 +1,20 @@
+local data = require "main.data"
+
 go.property("speed", 500)
+
+local function resetBall(self)
+	-- local randomAngle = (math.pi / 4) * (math.random()-math.random())
+	-- local randomDirection = data.round(math.random()) * math.pi
+	-- self.direction = vmath.quat_rotation_z(randomDirection + randomAngle)
+
+	local randomVelocityX = (math.random()-math.random()) * 2
+	local randomVelocityY = math.random() > 0.5 and -1 or 1
+	self.direction = vmath.normalize(vmath.vector3(randomVelocityX, randomVelocityY, 0))
+end
 
 function init(self)
 	math.randomseed(os.time())
-	
-	local rotation = go.get_rotation()
-	local randomAngle = math.rad(math.random()*360)
-	self.direction = rotation * vmath.quat_rotation_z(randomAngle)
-
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	resetBall(self)
 end
 
 function final(self)
@@ -20,6 +25,7 @@ end
 
 function update(self, dt)
 	local pos = go.get_position()
+	-- local newPos = vmath.rotate(self.direction, vmath.vector3(0, self.speed, 0))
 	pos = pos + self.direction * self.speed * dt
 	go.set_position(pos)
 end
