@@ -22,6 +22,14 @@ images {
   image: "/assets/images/paddle_red.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
+images {
+  image: "/assets/images/1player.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/assets/images/2players.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
 margin: 1
 extrude_borders: 0
 inner_padding: 0
