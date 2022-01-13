@@ -46,7 +46,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "main/blue_button"
+  texture: "main/1player"
   id: "btn_1player"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -55,10 +55,10 @@ nodes {
   layer: ""
   inherit_alpha: true
   slice9 {
-    x: 6.0
-    y: 6.0
-    z: 6.0
-    w: 6.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
   }
   clipping_mode: CLIPPING_MODE_NONE
   clipping_visible: true
@@ -93,9 +93,9 @@ nodes {
     w: 1.0
   }
   color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   type: TYPE_TEXT
@@ -163,7 +163,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "main/blue_button"
+  texture: "main/2players"
   id: "btn_2players"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -172,10 +172,10 @@ nodes {
   layer: ""
   inherit_alpha: true
   slice9 {
-    x: 6.0
-    y: 6.0
-    z: 6.0
-    w: 6.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
   }
   clipping_mode: CLIPPING_MODE_NONE
   clipping_visible: true
@@ -210,9 +210,9 @@ nodes {
     w: 1.0
   }
   color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.0
+    y: 0.0
+    z: 0.0
     w: 1.0
   }
   type: TYPE_TEXT
@@ -400,7 +400,7 @@ layouts {
     }
     type: TYPE_BOX
     blend_mode: BLEND_MODE_ALPHA
-    texture: "main/blue_button"
+    texture: "main/1player"
     id: "btn_1player"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -409,10 +409,10 @@ layouts {
     layer: ""
     inherit_alpha: true
     slice9 {
-      x: 6.0
-      y: 6.0
-      z: 6.0
-      w: 6.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
     }
     clipping_mode: CLIPPING_MODE_NONE
     clipping_visible: true
@@ -455,7 +455,7 @@ layouts {
     }
     type: TYPE_BOX
     blend_mode: BLEND_MODE_ALPHA
-    texture: "main/blue_button"
+    texture: "main/2players"
     id: "btn_2players"
     xanchor: XANCHOR_NONE
     yanchor: YANCHOR_NONE
@@ -464,10 +464,10 @@ layouts {
     layer: ""
     inherit_alpha: true
     slice9 {
-      x: 6.0
-      y: 6.0
-      z: 6.0
-      w: 6.0
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      w: 0.0
     }
     clipping_mode: CLIPPING_MODE_NONE
     clipping_visible: true
